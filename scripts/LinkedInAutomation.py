@@ -6,6 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import urllib.parse 
+import tempfile
+
 
 def setup_driver():
     """
@@ -17,6 +19,8 @@ def setup_driver():
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    temp_dir = tempfile.mkdtemp()
+    options.add_argument(f"--user-data-dir={temp_dir}")
     
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     return driver
