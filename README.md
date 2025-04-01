@@ -1,5 +1,7 @@
 # LinkedIn + Email Automation App
 
+Find the app here https://inconnect.streamlit.app/
+
 This application allows users to automate outreach tasks by:
 
 - Scraping LinkedIn profiles based on name, organization, and position
