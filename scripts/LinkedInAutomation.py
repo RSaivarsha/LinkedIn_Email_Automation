@@ -14,11 +14,11 @@ def setup_driver():
     Sets up Chrome in Incognito mode to avoid LinkedIn's session tracking.
     """
     options = webdriver.ChromeOptions()
-    options.add_argument("--incognito")
     options.add_argument("--disable-extensions")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--headless=new")
     temp_dir = tempfile.mkdtemp()
     options.add_argument(f"--user-data-dir={temp_dir}")
     
