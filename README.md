@@ -22,8 +22,8 @@ All through a simple and interactive Streamlit interface.
 
 ## Project Structure
     
-    ```
-    automation-app/
+    
+    LinkedIn_Email_Automation/
     ├── app.py                  # Main Streamlit application file       
     ├── requirements.txt        # Python dependencies
     ├── scripts/                  # Backend automation scripts
@@ -31,7 +31,7 @@ All through a simple and interactive Streamlit interface.
     │   ├── LinkedInAutomation.py         # LinkedIn profile scraping and messaging
     │   └── EmailAutomation.py         #   Gmail automation for sending emails
     └── README.md              # This file
-    ```
+    
 
 ---
 
