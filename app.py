@@ -1,4 +1,5 @@
 import streamlit as st
+from selenium.webdriver.support.ui import WebDriverWait
 from dotenv import load_dotenv
 import os
 from scripts.EmailAutomation import send_email
