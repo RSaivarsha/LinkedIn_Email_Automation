@@ -1,30 +1,38 @@
-# Use official Streamlit + Python base
 FROM python:3.10-slim
 
-# Install dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    wget curl unzip gnupg \
-    chromium-driver \
-    chromium \
+    wget \
+    unzip \
+    gnupg \
+    curl \
+    fonts-liberation \
     libglib2.0-0 \
     libnss3 \
     libgconf-2-4 \
-    libfontconfig1 \
     libxss1 \
     libappindicator1 \
-    libindicator7 \
-    fonts-liberation \
     libatk-bridge2.0-0 \
     libgtk-3-0 \
-    --no-install-recommends \
- && apt-get clean && rm -rf /var/lib/apt/lists/*
+    libu2f-udev \
+    xdg-utils \
+    --no-install-recommends && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Set environment variable for Chrome
-ENV CHROME_BIN=/usr/bin/chromium
-ENV PATH="$PATH:/usr/lib/chromium"
+# Install Chrome
+RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - && \
+    echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list && \
+    apt-get update && apt-get install -y google-chrome-stable && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy app
+# Set Chrome binary path
+ENV CHROME_BIN=/usr/bin/google-chrome
+ENV PATH=$PATH:/usr/bin/google-chrome
+
+# Set working dir
 WORKDIR /app
+
+# Copy everything
 COPY . .
 
 # Install Python packages
