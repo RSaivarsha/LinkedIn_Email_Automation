@@ -22,7 +22,7 @@ All through a simple and interactive Streamlit interface.
 
 ## Project Structure
     
-    ```plaintext   
+    ```
     automation-app/
     ├── app.py                  # Main Streamlit application file       
     ├── requirements.txt        # Python dependencies
@@ -52,8 +52,8 @@ pip install -r requirements.txt
 ### 3. Set up environment variables
 Create a `.env` file in the root directory and add your credentials:
 
-```plaintext
-# .env file
+```
+.env file
 HUNTER_API_KEY=your_hunter_api_key
 GMAIL_EMAIL=your_gmail_email
 GMAIL_PASSWORD=your_gmail_password
