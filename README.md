@@ -1,6 +1,6 @@
 # LinkedIn + Email Automation App
 
-Find the app here [(LinkedIn Email Automation Demo) (https://linkedin-email-automation.onrender.com/)]
+Find the app here [LinkedIn Email Automation Demo](https://linkedin-email-automation.onrender.com/)
 
 This application allows users to automate outreach tasks by:
 
