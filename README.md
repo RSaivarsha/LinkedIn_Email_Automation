@@ -1,6 +1,6 @@
 # LinkedIn + Email Automation App
 
-Find the app here https://inconnect.streamlit.app/
+Find the app here [(https://inconnect.streamlit.app/](https://linkedin-email-automation.onrender.com/)]
 
 This application allows users to automate outreach tasks by:
 
